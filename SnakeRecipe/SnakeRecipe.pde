@@ -2,16 +2,23 @@
 // 1. Follow the recipe instructions inside the Segment class.
 
 // The Segment class will be used to represent each part of the moving snake.
-
+ 
 class Segment {
+  int xSegment;
+  int ySegment;
 
   //2. Create x and y member variables to hold the location of each segment.
+ 
 
   // 3. Add a constructor with parameters to initialize each variable.
-
+Segment(int xSegment, int ySegment) {
+  this.xSegment = xSegment;
+  this.ySegment = ySegment;
+}
 
   // 4. Add getter and setter methods for both the x and y member variables.
 }
+
 
 
 // 5. Create (but do not initialize) a Segment variable to hold the head of the Snake
