@@ -189,19 +189,19 @@ void keyPressed() {
 void checkBoundaries() {
   
   if(head.getX() > 500) {
-    print("X> 500 - out of bounds\n");
+    //print("X> 500 - out of bounds\n");
     head.setX(0);
   }
   if(head.getX() < 0) {
-    print("X < 0 - out of bounds\n");
+    //print("X < 0 - out of bounds\n");
     head.setX(500);
   }
   if(head.getY() > 500) {
-    print("Y > 500 - out of bounds\n");
+    //print("Y > 500 - out of bounds\n");
     head.setY(0);
   }
   if(head.getY() < 0) {
-    print("Y < 0 - out of bounds\n");
+    //print("Y < 0 - out of bounds\n");
     head.setY(500);
   }
 }
@@ -271,6 +271,14 @@ void drawTail() {
 void checkTailCollision() {
 
   // If your head has the same location as one of your segments...
+   for (Segment ta : tailArray) {
+    if(head.getX() == ta.getX() && head.getY() == ta.getY()) {
+      print("head has same location, resetting food\n");
+      foodEaten = 1;
+  }
+}
+
+  
 
   // reset your food variable
 
